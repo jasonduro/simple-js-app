@@ -1,10 +1,21 @@
+//created an array of pokemon with three attributes
 let pokemonList = [
     {
-        name: 'Bulbasaur';
-        height: 7;
+        name: 'Bulbasaur',
+        height: 7,
         types: [
             'grass',
-            'poison',
-        ];
-    }
-]
+            'poison'
+        ]
+    },
+    {
+        name: 'Charmander',
+        height: 6,
+        types: 'fire'
+    },
+    {
+        name: 'Squirtle',
+        height: 5,
+        types: 'water'
+    },
+];
