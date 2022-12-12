@@ -2,7 +2,7 @@
 let pokemonList = [
     {
         name: 'Bulbasaur',
-        height: 7,
+        height: 0.7,
         types: [
             'grass',
             'poison'
@@ -10,12 +10,21 @@ let pokemonList = [
     },
     {
         name: 'Charmander',
-        height: 6,
+        height: 1.6,
         types: 'fire'
     },
     {
         name: 'Squirtle',
-        height: 5,
+        height: 0.5,
         types: 'water'
     },
 ];
+
+//created the 'for' loop with a conditional 'and' statement. also added line breaks
+for (let i=0; i<pokemonList.length; i++){
+    if (pokemonList[i].height<1 && pokemonList[i].height>=0.5){
+        document.write(pokemonList[i].name + " is average height." + "<br>");
+    } else if (pokemonList[i].height > 1.5){
+        document.write(pokemonList[i].name + " Wow, that's big!" + "<br>");
+    }
+}
