@@ -21,15 +21,41 @@ let pokemonList = [
     },
 ];
 
-/* printArrayDetails function declaration
-function printArrayDetails(){
-    for (let i = 0; i < pokemonList.length; i++){
-        document.write("<p>" + pokemonList[i].name + " is average height. " + "</p>");
+//created a second pokemonList array
+let pokemonList2 = [
+    // pokemon objects listed below
+    {
+        name: 'Randomon',
+        height: 0.9,
+        types: [
+            'grass',
+            'poison'
+        ]
+    },
+    {
+        name: 'Strageobob',
+        height: 0.8,
+        types: 'fire'
+    },
+    {
+        name: 'Scittles',
+        height: 0.6,
+        types: 'water'
+    },
+];
+
+function printArrayDetails(list){
+    for (let i = 0; i < list.length; i++){
+        document.write("<p>" + list[i].name + "</p>")
+        console.log(list[i].name);
     }
 }
-*/
 
-//created the 'for' loop with a conditional 'and' statement. also added line breaks
+printArrayDetails(pokemonList);
+printArrayDetails(pokemonList2);
+
+
+/* older code from exercise 1.3
 for (let i=0; i<pokemonList.length; i++){
     if (pokemonList[i].height<1 && pokemonList[i].height>=0.5){
         document.write("<p>" + pokemonList[i].name + " is average height. " + "</p>");
@@ -37,3 +63,17 @@ for (let i=0; i<pokemonList.length; i++){
         document.write("<p>" + pokemonList[i].name + " Wow, that's big!" + "</p>");
     }
 }
+*/
+
+// the function return statement example code 
+function divide(dividend, divisor){
+    if(divisor === 0){
+        return "You're trying to divide by zero silly goose."
+    }else{
+        let result = dividend / divisor;
+        return result;
+    }
+}
+
+document.write(divide(7, 0))
+console.log(divide(7, 0));
