@@ -1,5 +1,6 @@
 //created an array of pokemon with three attributes
 let pokemonList = [
+    // pokemon objects listed below
     {
         name: 'Bulbasaur',
         height: 0.7,
