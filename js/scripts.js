@@ -77,3 +77,20 @@ function divide(dividend, divisor){
 
 document.write(divide(7, 0))
 console.log(divide(7, 0));
+
+
+/* Assigning a function to a variable Code Notes: 
+Function Expression instead of function declaration
+
+let add = function(number1, number2) {
+  return number1 + number2
+};
+
+// Assigning a function to an object property
+let person = {};
+
+person.tellMyAge = function() {
+  return 42
+};
+*/
+
