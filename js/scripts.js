@@ -21,6 +21,14 @@ let pokemonList = [
     },
 ];
 
+/* printArrayDetails function declaration
+function printArrayDetails(){
+    for (let i = 0; i < pokemonList.length; i++){
+        document.write("<p>" + pokemonList[i].name + " is average height. " + "</p>");
+    }
+}
+*/
+
 //created the 'for' loop with a conditional 'and' statement. also added line breaks
 for (let i=0; i<pokemonList.length; i++){
     if (pokemonList[i].height<1 && pokemonList[i].height>=0.5){
