@@ -41,7 +41,8 @@ console.log(pokemonRepository.getAll);
 pokemonRepository.add({ name: 'Pikachu' });
 console.log(pokemonRepository.getAll());
 
-document.write(pokemonRepository);
+//trying to display this on the html page DOM
+document.write(pokemonRepository.getAll());
 
 /* Tried adding the Object.keys but this didn't work
 Object.keys(pokemonList).forEach(getAll(property) {
