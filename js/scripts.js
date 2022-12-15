@@ -22,14 +22,6 @@ let pokemonRepository = (function() {
     },
 ];
 
-/* added the forEach function but commented out when testing the arrow function below
-pokemonList.forEach(function(pokemon) {
-    console.log(pokemon.name + ' is ' + pokemon.height + " meters tall.")
-}) */
-
-//testing out the arrow function
-pokemonList.forEach(pokemon => console.log(pokemon));
-
 function add(pokemon) {
     pokemonList.push(pokemon);
 }
@@ -39,41 +31,33 @@ function getAll() {
 }
 
 return {
-    add: add, 
+    add: add,
     getAll: getAll
 };
+
 })();
 
+console.log(pokemonRepository.getAll);
+pokemonRepository.add({ name: 'Pikachu' });
+console.log(pokemonRepository.getAll());
 
+document.write(pokemonRepository);
 
-/* old pokemon list 2 code from a previous exercise
-let pokemonList2 = [
-    // pokemon objects listed below
-    {
-        name: 'Randomon',
-        height: 0.9,
-        types: [
-            'grass',
-            'poison'
-        ]
-    },
-    {
-        name: 'Strageobob',
-        height: 0.8,
-        types: 'fire'
-    },
-    {
-        name: 'Scittles',
-        height: 0.6,
-        types: 'water'
-    },
-];
+/* Tried adding the Object.keys but this didn't work
+Object.keys(pokemonList).forEach(getAll(property) {
+    console.log(''[property]),
+}); 
+*/
 
-function printArrayDetails(list){
-    for (let i = 0; i < list.length; i++){
-        document.write("<p>" + list[i].name + "</p>")
-        console.log(list[i].name);
-    }
+/* tried adding the forEach function
+pokemonList.forEach(getAll(pokemon) {
+    console.log(pokemon.name + ' is ' + pokemon.height + " meters tall.")
+})  
+*/
+
+//how do I set up the forEach?? 
+/* function getAll(pokemonList) {
+    console.log(pokemon.name);
 }
-
  */
+
