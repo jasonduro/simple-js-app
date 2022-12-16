@@ -1,8 +1,22 @@
 //created a pokemon repository and IIFE 
 let pokemonRepository = (function() {
-    let pokemonList = [
-    // pokemon objects listed below
-    {
+    
+    let pokemonList = [];
+    
+    function add(pokemon) {
+        pokemonList.push(pokemon);
+    }
+    
+    function getAll() {
+        return pokemonList;
+    }
+    
+    return {
+        add: add,
+        getAll: getAll
+    };
+
+/*     {
         name: 'Bulbasaur',
         height: 0.7,
         types: [
@@ -21,19 +35,8 @@ let pokemonRepository = (function() {
         types: 'water'
     },
 ];
+ */
 
-function add(pokemon) {
-    pokemonList.push(pokemon);
-}
-
-function getAll() {
-    return pokemonList;
-}
-
-return {
-    add: add,
-    getAll: getAll
-};
 
 })();
 
