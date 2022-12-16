@@ -15,33 +15,30 @@ let pokemonRepository = (function() {
         add: add,
         getAll: getAll
     };
-
-/*     {
-        name: 'Bulbasaur',
-        height: 0.7,
-        types: [
-            'grass',
-            'poison'
-        ]
-    },
-    {
-        name: 'Charmander',
-        height: 1.6,
-        types: 'fire'
-    },
-    {
-        name: 'Squirtle',
-        height: 0.5,
-        types: 'water'
-    },
-];
- */
-
-
 })();
 
+pokemonRepository.add({ 
+    name: 'Bulbasaur',
+    height: 0.7,
+    type: ['grass', 'poison'],
+});
+pokemonRepository.add({ 
+    name: 'Charmander',
+    height: 1.6,
+    type: ['fire'],
+});
+pokemonRepository.add({ 
+    name: 'Squirtle',
+    height: 0.5,
+    type: ['water'],
+});
+pokemonRepository.add({ 
+    name: 'Pikachu',
+    height: 1.2
+    type: ['electric'],
+ });
+
 console.log(pokemonRepository.getAll);
-pokemonRepository.add({ name: 'Pikachu' });
 console.log(pokemonRepository.getAll());
 
 //trying to display this on the html page DOM
