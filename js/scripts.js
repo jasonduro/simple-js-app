@@ -1,4 +1,4 @@
-//created a pokemon repository and IIFE 
+//created a pokemon repository within an IIFE 
 let pokemonRepository = (function() {
     
     let pokemonList = [];
@@ -34,31 +34,13 @@ pokemonRepository.add({
 });
 pokemonRepository.add({ 
     name: 'Pikachu',
-    height: 1.2
+    height: 1.2,
     type: ['electric'],
  });
 
-console.log(pokemonRepository.getAll);
-console.log(pokemonRepository.getAll());
+let pokemonList = pokemonRepository.getAll();
 
-//trying to display this on the html page DOM
-document.write(pokemonRepository.getAll());
-
-/* Tried adding the Object.keys but this didn't work
-Object.keys(pokemonList).forEach(getAll(property) {
-    console.log(''[property]),
-}); 
-*/
-
-/* tried adding the forEach function
-pokemonList.forEach(getAll(pokemon) {
-    console.log(pokemon.name + ' is ' + pokemon.height + " meters tall.")
-})  
-*/
-
-//how do I set up the forEach?? 
-/* function getAll(pokemonList) {
-    console.log(pokemon.name);
+pokemonList.forEach(printDetails);
+function printDetails(pokemon) {
+    document.write(`<p>${pokemon.name} (height: ${pokemon.height})`);
 }
- */
-
