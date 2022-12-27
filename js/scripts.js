@@ -1,7 +1,23 @@
 //created a pokemon repository within an IIFE 
 let pokemonRepository = (function() {
     
-    let pokemonList = [];
+    let pokemonList = [
+        {  
+            name: 'Bulbasaur',
+            height: 0.7,
+            type: ['grass', ' poison'],
+        },
+        {
+            name: 'Charmander',
+            height: 1.6,
+            type: ['fire'],
+        },
+        {
+            name: 'Squirtle',
+            height: 0.5,
+            type: ['water'],
+        }
+    ]
     
     function add(pokemon) {
         pokemonList.push(pokemon);
@@ -18,21 +34,6 @@ let pokemonRepository = (function() {
 })();
 
 pokemonRepository.add({ 
-    name: 'Bulbasaur',
-    height: 0.7,
-    type: ['grass', 'poison'],
-});
-pokemonRepository.add({ 
-    name: 'Charmander',
-    height: 1.6,
-    type: ['fire'],
-});
-pokemonRepository.add({ 
-    name: 'Squirtle',
-    height: 0.5,
-    type: ['water'],
-});
-pokemonRepository.add({ 
     name: 'Pikachu',
     height: 1.2,
     type: ['electric'],
@@ -42,5 +43,8 @@ let pokemonList = pokemonRepository.getAll();
 
 pokemonList.forEach(printDetails);
 function printDetails(pokemon) {
-    document.write(`<p>${pokemon.name} (height: ${pokemon.height})`);
+    document.write(`<p>${pokemon.name} (height: ${pokemon.height}) (type: ${pokemon.type})`);
 }
+
+
+
