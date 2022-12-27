@@ -47,4 +47,8 @@ function printDetails(pokemon) {
 }
 
 
-
+/* Commented out this forEach function because it is similar to the code above
+pokemonRepository.getAll().forEach(function(pokemon) {
+    document.write('<p>' + pokemon.name + '<br>' + 'Height: ' + pokemon.height + 'm<br>' + 'Types: ' + pokemon.type + '</p>');
+    });
+/*
