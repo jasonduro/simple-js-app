@@ -44,7 +44,7 @@ let pokemonList = pokemonRepository.getAll();
 pokemonList.forEach(printDetails);
 function printDetails(pokemon) {
     document.write(`<p>${pokemon.name} (height: ${pokemon.height}) (type: ${pokemon.type})`);
-    console.log(`<p>${pokemon.name} (height: ${pokemon.height}) (type: ${pokemon.type})`);
+    console.log(`${pokemon.name} (height: ${pokemon.height}) (type: ${pokemon.type})`);
 };
 
 
