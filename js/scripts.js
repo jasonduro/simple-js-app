@@ -44,11 +44,14 @@ let pokemonList = pokemonRepository.getAll();
 pokemonList.forEach(printDetails);
 function printDetails(pokemon) {
     document.write(`<p>${pokemon.name} (height: ${pokemon.height}) (type: ${pokemon.type})`);
-}
+    console.log(`<p>${pokemon.name} (height: ${pokemon.height}) (type: ${pokemon.type})`);
+};
+
 
 
 /* Commented out this forEach function because it is similar to the code above
 pokemonRepository.getAll().forEach(function(pokemon) {
     document.write('<p>' + pokemon.name + '<br>' + 'Height: ' + pokemon.height + 'm<br>' + 'Types: ' + pokemon.type + '</p>');
     });
-/*
+array.forEach(element => {
+*/
