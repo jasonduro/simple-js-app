@@ -1,6 +1,7 @@
 //created a pokemon repository within an IIFE 
 let pokemonRepository = (function() {
     
+    // pokemon array below
     let pokemonList = [
         {  
             name: 'Bulbasaur',
@@ -17,41 +18,57 @@ let pokemonRepository = (function() {
             height: 0.5,
             type: ['water'],
         }
-    ]
-    
+    ];
+
+    //add pokemon function with rules
     function add(pokemon) {
-        pokemonList.push(pokemon);
-    }
+        if (
+          typeof pokemon === "object" &&
+          "name" in pokemon &&
+          "height" in pokemon &&
+          "types" in pokemon
+        ) {
+          repository.push(pokemon);
+        } else {
+          console.log("pokemon is not correct");
+        }
+      }
     
+    //getAll function to return all of the items in the pokemonList array
     function getAll() {
         return pokemonList;
     }
-    
+
+    //Add pokemon to a list with the format of a button
+    function addListItem(pokemon){
+        let pokemonList = document.querySelector('.pokemon-list');
+        let listpokemon = document.createElement('li');
+        let button = document.createElement('button');
+        button.innerText = pokemon.name;
+        button.classList.add('button-class');
+        listpokemon.appendChild(button);
+        pokemonList.appendChild(listpokemon);
+    }
+
+    //function to add new pokemon via push
+    function add(pokemon) {
+        pokemonList.push(pokemon);
+    }
+
     return {
         add: add,
-        getAll: getAll
+        getAll: getAll,
+        addListItem: addListItem
     };
 })();
 
-pokemonRepository.add({ 
-    name: 'Pikachu',
-    height: 1.2,
-    type: ['electric'],
- });
+pokemonRepository.add({ name: "Pikachu", height: 0.3, type: ["electric"] });
 
-let pokemonList = pokemonRepository.getAll();
+console.log(pokemonRepository.getAll());
 
-pokemonList.forEach(printDetails);
-function printDetails(pokemon) {
-    document.write(`<p>${pokemon.name} (height: ${pokemon.height}) (type: ${pokemon.type})`);
-    console.log(`${pokemon.name} (height: ${pokemon.height}) (type: ${pokemon.type})`);
-};
-
-
-
-/* Commented out this forEach function because it is similar to the code above
 pokemonRepository.getAll().forEach(function(pokemon) {
-    document.write('<p>' + pokemon.name + '<br>' + 'Height: ' + pokemon.height + 'm<br>' + 'Types: ' + pokemon.type + '</p>');
-    });
-array.forEach(element => {
-*/
+    pokemonRepository.addListItem(pokemon);
+});
+
+
+
