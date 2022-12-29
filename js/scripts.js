@@ -51,7 +51,8 @@ let pokemonRepository = (function() {
         listpokemon.appendChild(button);
         pokemonList.appendChild(listpokemon);
     }
-
+    
+    //function to showDetails of pokemon object
     function showDetails(pokemon) {
         console.log(pokemon);
     }
