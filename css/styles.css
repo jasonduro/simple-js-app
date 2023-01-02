@@ -17,6 +17,13 @@ body {
     min-height: 100vh;
 }
 
+/*tried making the pokedex more responsive*/
+@media screen and (max-width: 800px) {
+    .button-class {
+        width: 100%;
+    }
+}
+
 h1 {
     font-size: 30px;
     font-weight: 700;
