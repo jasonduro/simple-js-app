@@ -18,7 +18,7 @@ body {
 }
 
 /*tried making the pokedex more responsive*/
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1200px) {
     .button-class {
         width: 100%;
     }
