@@ -53,6 +53,8 @@ let pokemonRepository = (function() {
             item.imageUrl = details.sprites.front_default;
             item.height = details.height;
             item.types = details.types;
+            item.weight = details.weight;
+            item.abilities = details.abilities;
         }).catch(function (e) {
             console.error(e);
         });        
@@ -63,67 +65,46 @@ let pokemonRepository = (function() {
         return pokemonList;
         }
 
-    //function to show modal    
-    function showModal(title, text, img) {
-        modalContainer.innerHTML = '';
-        let modal = document.createElement('div');
-        modal.classList.add('modal');
+    //function to show modal
+    function showModal(item) {
+        let modalBody = $('.modal-body');
+        let modalTitle = $('.modal-title');
+        let modalHeader = $('.modal-header');
+        let $modalContainer = $("#modal-container");
+
+        modalHeader.empty();
+        modalTitle.empty();
+        modalBody.empty();
     
-        //Adding the new Modal Content - Close Button
-        let closeButtonElement = document.createElement('button');
-        closeButtonElement.classList.add('modal-close');
-        closeButtonElement.innerText = 'Close';
-        closeButtonElement.addEventListener('click', hideModal);
+    //creating element for name in modal content
+    let nameElement = $('<h1>' + item.name + '</h1>');
+    //create img in modal content
+    let imageElement = $('<img class="modal-img" style="width:50%">');
+    imageElement.attr("src", item.imageUrl);
+    //create element for height in modal content
+    let heightElement = $("<p>" + "height: " + item.height + "</p>");
+    //create element for weight in modal content
+    let weightElement = $("<p>" + "weight: " + item.weight + "</p>");
+    //create element for type in modal content
+    let typesElement = $("<p>" + "types: " + item.types + "</p>");
+    //create element for abilities in modal content
+    let abilitiesElement = $("<p>" + "abilities: " + item.abilities + "</p>");
 
-        //creating the modal title element
-        let titleElement = document.createElement('h1');
-        titleElement.innerText = title;
-        //creating the modal content element
-        let contentElement = document.createElement('p');
-        contentElement.innerText = text;
-        //creating the modal img element
-        let imageElement = document.createElement('img');
-        imageElement.setAttribute('src', img);
-        imageElement.setAttribute('alt', "Pokemon Image");
+    modalTitle.append(nameElement);
+    modalBody.append(imageElement);
+    modalBody.append(heightElement);
+    modalBody.append(weightElement);
+    modalBody.append(typesElement);
+    modalBody.append(abilitiesElement);
+}
 
-        modal.appendChild(closeButtonElement);
-        modal.appendChild(titleElement);
-        modal.appendChild(contentElement);
-        modal.appendChild(imageElement);
-        modalContainer.appendChild(modal); 
-
-        modalContainer.classList.add('is-visible');
-    }
-
-    //function to close modal
-    function hideModal() {
-        modalContainer.classList.remove('is-visible');
-    }
-
-    //adding escape key functionality to escape modal
-    window.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
-            hideModal();
-        }
-    });
-
-    //adding functionality to click outside of modal to exit
-    modalContainer.addEventListener('click', (e) => {
-        let target = e.target;
-        if (target === modalContainer) {
-            hideModal();
-        }
-    });
-
-
-
-    //function to showDetails of pokemon object
-    function showDetails(pokemon) {
+   //function to showDetails of pokemon object
+   function showDetails(pokemon) {
         loadDetails(pokemon).then(function () {
-            console.log(pokemon);
-            showModal(pokemon.name, 'Height: ' + pokemon.height, pokemon.imageUrl);
+           console.log(pokemon);
+            showModal();
         });
-    }
+}
 
     return {
         add: add,
