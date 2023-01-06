@@ -10,7 +10,7 @@
 
   <!-- Navigation Menu -->
   <body>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
       <a class="navbar-brand" href="#">Pokedex</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -25,7 +25,7 @@
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <input class="form-control mr-sm-2" id="searchBar" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
       </div>
@@ -34,9 +34,8 @@
     <!-- Trying to manipulate the list to create multiple, responsive columns -->    
     <div class="container">
       <h3>Gotta catch'em all!</h3>
-      </div>
       <ul class="pokemon-list list-group"></ul>
-
+      </div>
 
 
   <!-- Modal -->
