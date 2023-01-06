@@ -1,7 +1,7 @@
 .btn-primary {
-  color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
+  color: #FEC20C;
+  background-color: #2D4596;
+  border-color: #161D4C;
   width: 300px;
 }
 
@@ -26,7 +26,6 @@
   justify-content: center;
   grid-template-columns: repeat(auto-fit, 300px);
 }
-
 
 .container {
   text-align: center;
