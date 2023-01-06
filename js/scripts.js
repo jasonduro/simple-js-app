@@ -5,8 +5,6 @@ let pokemonRepository = (function() {
     let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
     let pokemonListElement = $('.pokemon-list');
 
-
-
     //getAll function to return all of the items in the pokemonList array
     function getAll() {
         return pokemonList;
