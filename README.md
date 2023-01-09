@@ -22,3 +22,7 @@ Things I need to add:
 6) Any other relevant materials you created for the project; for example, user flows, user stories, and/or a Kanban board. Be sure to explain how you worked with these materials during the project.
 
 Should incldue the PDF of the Project Brief (if I can find it).
+[Full-Stack+Immersion+A1+Project+Brief.pdf](https://github.com/jasonduro/simple-js-app/files/10371395/Full-Stack%2BImmersion%2BA1%2BProject%2BBrief.pdf)
+
+After review:
+Needs to be fully responsive especially at smaller screen sizes. The application at the moment has a horizontal scroll on small screens. 
