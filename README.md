@@ -11,6 +11,10 @@ https://jasonduro.github.io/simple-js-app/
 
 As the sole developer for my very first coding project - I faced numerous challenges. I needed to learn how to set up my development environment, learn how to debug code, and learn how to make code work AND look somewhat good.
 
+![Pokedex main](https://github.com/jasonduro/simple-js-app/assets/38364361/76393188-03b7-48d4-8354-9f6dfe1037ec)
+![Pokemon clicked](https://github.com/jasonduro/simple-js-app/assets/38364361/48811afd-fc15-46bc-8dc4-e67a570923bd)
+![Poke search](https://github.com/jasonduro/simple-js-app/assets/38364361/6d2b8a55-ec78-4698-a438-4de59b4f24f2)
+
 # Features and Requirements User Goals
 Users should be able to view a list of data and see more details for a given data item on demand. 
 
