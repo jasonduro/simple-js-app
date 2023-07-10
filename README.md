@@ -9,20 +9,35 @@ https://jasonduro.github.io/simple-js-app/
 
 ----
 
-Things I need to add:
-1) A brief description of the project. You can use the project brief or README file as inspiration. In your description, try also to reflect on your work by answering the following questions (you don't need too much detail; the key points are fine):
-- What was your role for this project and what tasks did you face?
-- What decisions did you take and why? What were the consequences?
-- If you could, what would you do differently?
-- What lessons did you learn during this project?
-2) A screenshot to represent the project.
-3) A link to the project’s GitHub repository.
-4) A link to the live, hosted version of your app (if possible). If you don’t have a live version, include screenshots that show the app’s functionality or a recording of your app in use.
-5) A list of the technologies used for each project (React, CSS etc. — again, you can pull this from your README file).
-6) Any other relevant materials you created for the project; for example, user flows, user stories, and/or a Kanban board. Be sure to explain how you worked with these materials during the project.
+As the sole developer for my very first coding project - I faced numerous challenges. I needed to learn how to set up my development environment, learn how to debug code, and learn how to make code work AND look somewhat good.
 
-Should incldue the PDF of the Project Brief (if I can find it).
+# Features and Requirements User Goals
+Users should be able to view a list of data and see more details for a given data item on demand. 
+
+## Key Features
+Load data from an external source (API)
+View a list of items
+On user action (e.g., by clicking on a list item), view details for that item
+Technical Requirements
+Required:
+* The app must load data from an external API; for instance, the Pokémon API.
+* The app must display a list of items loaded from that API after the page is loaded.
+* The app must enable the viewing of more details for a given list item (like a Pokémon) on
+demand, such as when clicking on a list item.
+* The app must have CSS styling.
+* The JavaScript code must be formatted according to ESLint rules.
+* The JavaScript code may be formatted via Prettier.
+* The JavaScript code may be manually formatted.
+* The app must use at least one additional complex UI pattern, such as a modal, for details or
+touch interactions.
+* The app may allow searching for items (e.g., searching for Pokémon).
+* The app must not throw any errors when being used.
+* The app should be deployed to a publicly accessible platform like GitHub Pages (you can
+review how to do this in Intro to Frontend Development's Exercise 10: Code Quality, Testing, &
+Web Hosting).
+* The app must work in Chrome, Firefox, Safari, Edge, and Internet Explorer 11.
+
+
+PDF of the Project Brief: 
 [Full-Stack+Immersion+A1+Project+Brief.pdf](https://github.com/jasonduro/simple-js-app/files/10371395/Full-Stack%2BImmersion%2BA1%2BProject%2BBrief.pdf)
 
-After review:
-Needs to be fully responsive especially at smaller screen sizes. The application at the moment has a horizontal scroll on small screens. 
